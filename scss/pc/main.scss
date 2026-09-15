@@ -1,6 +1,9 @@
 /** IMPORTS **/
 @import "../variables.scss";
-@import "../homePage.scss/homepage.scss";
+
+@import "./homepage/homepage.scss";
+@import "./property/property.scss";
+@import "./property/detail.scss";
 
 #pc-wrap {
   #top {
@@ -44,27 +47,6 @@
               font-weight: 600;
               line-height: normal;
               cursor: pointer;
-              .community_menu {
-                position: absolute;
-                left: -177%;
-                top: 30px;
-                width: 434px;
-                height: 33px;
-                background: white;
-                transition: all ease 2s;
-                &:before {
-                  content: "";
-                  display: block;
-                  position: absolute;
-                  top: 0;
-                  right: 50%;
-                  width: 10px;
-                  height: 10px;
-                  background: white;
-                  transform: translateY(-50%) rotate(45deg);
-                  z-index: 0;
-                }
-              }
             }
           }
           .user-box {
@@ -101,28 +83,6 @@
                 border-radius: 50%;
                 object-fit: cover;
               }
-            }
-          }
-          .lan-box {
-            margin-left: 28px;
-            display: flex;
-            align-items: center;
-            .notification-icon {
-              color: white;
-            }
-            .btn-lang {
-              border-radius: 4px;
-              img {
-                width: 24px;
-                height: 17px;
-                border-radius: 2px;
-              }
-            }
-            .img-flag {
-              width: 24px;
-              height: 17px;
-              border-radius: 2px;
-              margin-right: 8px;
             }
           }
         }
@@ -319,8 +279,6 @@
                 #fff 0%,
                 rgba(255, 255, 255, 0) 100%
               );
-              // -webkit-background-clip: text;
-              // -webkit-text-fill-color: transparent;
               text-transform: capitalize;
             }
           }
